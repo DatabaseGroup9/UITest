@@ -1,13 +1,13 @@
-Feature: Get Books By City
+Feature: Get books by city
   Return list of books
 
   Scenario Outline: Enter Valid City
     Given The city is '<city>'
-    When Enter '<city>' and choose '<database>'
-    Then I should get '<page>'
+    When Enter the city as '<city>' and choose '<database>'
+    Then I should get S1 result as '<result>'
 
 Examples:
-    | city     | page            | database |
-    | Anderson | success         | mongodb  |
-    | Anderson | success         | stub     |
+    | city     | database |  result      | 
+    | Anderson | stub     | success      |
+    | Anderson | mongodb  | success      |
 
